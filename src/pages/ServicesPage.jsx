@@ -14,15 +14,8 @@ export default function ServicesPage() {
         <div className="absolute -top-40 right-[-10%] -z-10 h-[280px] w-[280px] rounded-full bg-brand-200/40 blur-[140px] sm:h-[480px] sm:w-[480px]" />
 
         <div className="container-x">
-          <nav className="mb-6 flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-[0.22em] text-brand-900/55 sm:mb-8 sm:text-[12px]">
-            <Link to="/" className="hover:text-brand-900">Home</Link>
-            <span className="text-brand-900/30">/</span>
-            <span className="text-brand-900">Services</span>
-          </nav>
-
           <div className="grid grid-cols-12 items-end gap-8">
             <div className="col-span-12 lg:col-span-8">
-              <p className="eyebrow mb-5 sm:mb-6">Full service catalog</p>
               <h1 className="display-h1 text-brand-950">
                 <SplitWord text="Property care," />{" "}
                 <span className="italic font-display text-brand-700">end</span>

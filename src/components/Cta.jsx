@@ -1,8 +1,23 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Reveal, { SplitWord } from "./Reveal";
 import { COMPANY } from "../data/site";
+
+// formsubmit.co relays form payloads to this inbox. first submission triggers
+// a one-time activation email — confirm to start receiving inquiries.
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/ubuntu.soohanur@gmail.com";
+
+const SERVICE_OPTIONS = [
+  "Initial securing",
+  "Winterization",
+  "Yard care & landscaping",
+  "Roofing",
+  "Plumbing",
+  "Trash out & debris removal",
+  "Eviction support",
+  "General maintenance",
+];
 
 export default function Cta() {
   const ref = useRef(null);
@@ -12,6 +27,37 @@ export default function Cta() {
   });
   const y = useTransform(scrollYProgress, [0, 1], ["10%", "-10%"]);
   const rot = useTransform(scrollYProgress, [0, 1], [-8, 8]);
+
+  const [status, setStatus] = useState("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    setStatus("sending");
+    setErrorMsg("");
+
+    const data = Object.fromEntries(new FormData(form));
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok || json.success === "false") {
+        throw new Error(json.message || "Submission failed.");
+      }
+      setStatus("sent");
+      form.reset();
+    } catch (err) {
+      setStatus("error");
+      setErrorMsg(err.message || "Submission failed. Try email or phone.");
+    }
+  };
 
   return (
     <section id="contact" ref={ref} className="relative overflow-hidden bg-brand-950 py-20 text-white sm:py-24 md:py-32 lg:py-44 noise">
@@ -67,34 +113,45 @@ export default function Cta() {
             <Reveal className="rounded-3xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur sm:p-6">
               <p className="font-display text-xl text-white">Request service</p>
               <p className="mt-1 text-[12.5px] text-white/55">Tell us about the property. We reply same business day.</p>
-              <form className="mt-6 grid grid-cols-2 gap-3" onSubmit={(e) => e.preventDefault()}>
+              <form className="mt-6 grid grid-cols-2 gap-3" onSubmit={handleSubmit}>
+                <input type="hidden" name="_subject" value="New website inquiry — In Time Property Care" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="text" name="_honey" tabIndex={-1} autoComplete="off" className="hidden" />
+
                 <input
                   type="text"
+                  name="Full name"
+                  required
                   placeholder="Full name"
                   className="col-span-2 rounded-xl border border-white/15 bg-white/[0.05] px-4 py-3.5 text-[15px] text-white placeholder:text-white/40 focus:border-accent-400 focus:outline-none sm:col-span-1"
                 />
                 <input
                   type="tel"
+                  name="Phone"
+                  required
                   placeholder="Phone"
                   className="col-span-2 rounded-xl border border-white/15 bg-white/[0.05] px-4 py-3.5 text-[15px] text-white placeholder:text-white/40 focus:border-accent-400 focus:outline-none sm:col-span-1"
                 />
                 <input
                   type="email"
+                  name="Email"
+                  required
                   placeholder="Email"
                   className="col-span-2 rounded-xl border border-white/15 bg-white/[0.05] px-4 py-3.5 text-[15px] text-white placeholder:text-white/40 focus:border-accent-400 focus:outline-none"
                 />
-                <select className="col-span-2 rounded-xl border border-white/15 bg-white/[0.05] px-4 py-3.5 text-[15px] text-white focus:border-accent-400 focus:outline-none">
-                  <option className="text-brand-950">Service interest…</option>
-                  <option className="text-brand-950">Initial securing</option>
-                  <option className="text-brand-950">Winterization</option>
-                  <option className="text-brand-950">Yard care & landscaping</option>
-                  <option className="text-brand-950">Roofing</option>
-                  <option className="text-brand-950">Plumbing</option>
-                  <option className="text-brand-950">Trash out & debris removal</option>
-                  <option className="text-brand-950">Eviction support</option>
-                  <option className="text-brand-950">General maintenance</option>
+                <select
+                  name="Service interest"
+                  defaultValue=""
+                  className="col-span-2 rounded-xl border border-white/15 bg-white/[0.05] px-4 py-3.5 text-[15px] text-white focus:border-accent-400 focus:outline-none"
+                >
+                  <option value="" className="text-brand-950">Service interest…</option>
+                  {SERVICE_OPTIONS.map((s) => (
+                    <option key={s} value={s} className="text-brand-950">{s}</option>
+                  ))}
                 </select>
                 <textarea
+                  name="Property address & scope"
                   rows={3}
                   placeholder="Property address & scope…"
                   className="col-span-2 rounded-xl border border-white/15 bg-white/[0.05] px-4 py-3.5 text-[15px] text-white placeholder:text-white/40 focus:border-accent-400 focus:outline-none"
@@ -102,8 +159,9 @@ export default function Cta() {
                 <label className="col-span-2 mt-1 flex items-start gap-3 rounded-2xl border border-white/15 bg-white/[0.03] p-3.5 text-[12.5px] leading-[1.7] text-white/75 sm:p-4">
                   <input
                     type="checkbox"
+                    name="SMS consent"
+                    value="Yes — opted in"
                     required
-                    defaultChecked={false}
                     className="mt-1 h-4 w-4 shrink-0 accent-accent-500"
                   />
                   <span>
@@ -113,12 +171,35 @@ export default function Cta() {
                     <Link to="/privacy" className="text-accent-300 underline-offset-4 hover:underline">Privacy Policy</Link>.
                   </span>
                 </label>
-                <button type="submit" className="col-span-2 btn-accent justify-center">
-                  Send request
-                  <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.5">
-                    <path d="M5 12h14M13 5l7 7-7 7" />
-                  </svg>
+
+                <button
+                  type="submit"
+                  disabled={status === "sending" || status === "sent"}
+                  className="col-span-2 btn-accent justify-center disabled:cursor-not-allowed disabled:opacity-60"
+                >
+                  {status === "sending" && "Sending…"}
+                  {status === "sent" && "Sent — we will reply soon"}
+                  {(status === "idle" || status === "error") && (
+                    <>
+                      Send request
+                      <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.5">
+                        <path d="M5 12h14M13 5l7 7-7 7" />
+                      </svg>
+                    </>
+                  )}
                 </button>
+
+                {status === "sent" && (
+                  <p className="col-span-2 mt-1 rounded-xl border border-accent-400/40 bg-accent-500/10 p-3 text-[12.5px] leading-[1.6] text-accent-200">
+                    Thanks — your request reached us. We will respond the same
+                    business day at the contact you provided.
+                  </p>
+                )}
+                {status === "error" && (
+                  <p className="col-span-2 mt-1 rounded-xl border border-red-400/40 bg-red-500/10 p-3 text-[12.5px] leading-[1.6] text-red-200">
+                    {errorMsg} Call {COMPANY.phoneDisplay} or email {COMPANY.email}.
+                  </p>
+                )}
               </form>
             </Reveal>
           </div>

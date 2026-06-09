@@ -27,7 +27,7 @@ export default function Hero() {
       <div className="container-x">
         <div className="grid grid-cols-12 items-end gap-y-10">
           <motion.div style={{ y: textY }} className="col-span-12">
-            <div className="mb-6 flex flex-wrap items-center gap-3 sm:mb-8 sm:gap-4">
+            <div className="hidden flex-wrap items-center gap-3 sm:mb-8 sm:flex sm:gap-4">
               <span className="eyebrow">Property Preservation & Maintenance</span>
               <span className="hidden h-px flex-1 bg-brand-900/15 sm:block" />
               <span className="hidden text-xs text-brand-900/55 sm:inline">Residential · Commercial · Investor</span>

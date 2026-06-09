@@ -9,7 +9,7 @@ import ScrollToTop from "./components/ScrollToTop";
 export default function App() {
   useLenis();
   return (
-    <div className="relative overflow-x-hidden">
+    <div className="relative overflow-x-clip">
       <Preloader />
       <Cursor />
       <ScrollToTop />

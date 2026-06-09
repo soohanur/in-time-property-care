@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import Reveal, { SplitWord } from "./Reveal";
 import { COMPANY } from "../data/site";
 
@@ -98,6 +99,20 @@ export default function Cta() {
                   placeholder="Property address & scope…"
                   className="col-span-2 rounded-xl border border-white/15 bg-white/[0.05] px-4 py-3.5 text-[15px] text-white placeholder:text-white/40 focus:border-accent-400 focus:outline-none"
                 />
+                <label className="col-span-2 mt-1 flex items-start gap-3 rounded-2xl border border-white/15 bg-white/[0.03] p-3.5 text-[12.5px] leading-[1.7] text-white/75 sm:p-4">
+                  <input
+                    type="checkbox"
+                    required
+                    defaultChecked={false}
+                    className="mt-1 h-4 w-4 shrink-0 accent-accent-500"
+                  />
+                  <span>
+                    I agree to receive SMS/text messages from In Time Property
+                    Care about my inquiry. Reply STOP to opt-out. Msg &amp;
+                    data rates may apply. I have read the{" "}
+                    <Link to="/privacy" className="text-accent-300 underline-offset-4 hover:underline">Privacy Policy</Link>.
+                  </span>
+                </label>
                 <button type="submit" className="col-span-2 btn-accent justify-center">
                   Send request
                   <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2.5">

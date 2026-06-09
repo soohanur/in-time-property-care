@@ -41,7 +41,7 @@ export default function About() {
                     <path d="M5 12h14M13 5l7 7-7 7" />
                   </svg>
                 </Link>
-                <Link to="/#contact" className="btn-secondary">Talk to us</Link>
+                <Link to="/contact" className="btn-secondary">Talk to us</Link>
               </div>
             </Reveal>
           </div>

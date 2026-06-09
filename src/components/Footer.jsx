@@ -60,7 +60,7 @@ export default function Footer() {
               <span className="text-white/55">{COMPANY.hoursNote}</span>
             </p>
             <Link
-              to="/#contact"
+              to="/contact"
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-accent-500 px-5 py-3 text-[13px] font-medium text-white transition-colors hover:bg-accent-600"
             >
               Request service
@@ -71,9 +71,19 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-start justify-between gap-4 text-[12px] text-white/55 md:flex-row md:items-center">
+        <div className="mt-10 flex flex-col items-start justify-between gap-5 text-[12px] text-white/55 md:flex-row md:items-center">
           <p>© {year} {COMPANY.name}. All rights reserved.</p>
-          <p className="text-white/45">{COMPANY.tagline}</p>
+          <ul className="flex flex-wrap items-center gap-x-6 gap-y-2 text-[12px] text-white/65">
+            <li>
+              <Link to="/privacy" className="link-underline hover:text-accent-300">Privacy Policy</Link>
+            </li>
+            <li>
+              <Link to="/terms" className="link-underline hover:text-accent-300">Terms &amp; Conditions</Link>
+            </li>
+            <li>
+              <Link to="/contact" className="link-underline hover:text-accent-300">Contact</Link>
+            </li>
+          </ul>
         </div>
       </div>
 

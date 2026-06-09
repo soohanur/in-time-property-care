@@ -108,7 +108,7 @@ export default function Services() {
                 </svg>
               </Link>
               <Link
-                to="/#contact"
+                to="/contact"
                 className="inline-flex items-center gap-3 rounded-full border border-white/25 px-6 py-3.5 text-sm font-medium text-white transition-all duration-300 hover:bg-white hover:text-brand-950"
               >
                 Request a quote
@@ -131,7 +131,7 @@ export default function Services() {
                 <div className="absolute left-5 top-5 rounded-full bg-white/95 px-3 py-1 text-[11px] font-medium tracking-wider text-brand-950">
                   {current.no} · {current.title}
                 </div>
-                <Link to="/#contact" className="absolute right-5 bottom-5 inline-flex items-center gap-2 rounded-full bg-accent-500 px-4 py-2 text-[12px] font-medium text-white">
+                <Link to="/contact" className="absolute right-5 bottom-5 inline-flex items-center gap-2 rounded-full bg-accent-500 px-4 py-2 text-[12px] font-medium text-white">
                   Quote this service
                   <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="2.5">
                     <path d="M5 12h14M13 5l7 7-7 7" />

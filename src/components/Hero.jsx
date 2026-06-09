@@ -66,7 +66,7 @@ export default function Hero() {
               </div>
               <div className="col-span-12 md:col-span-7">
                 <div className="flex flex-wrap items-center gap-3 md:justify-end">
-                  <Link to="/#contact" className="btn-primary">
+                  <Link to="/contact" className="btn-primary">
                     Request service
                     <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2">
                       <path d="M5 12h14M13 5l7 7-7 7" />

@@ -15,16 +15,19 @@ export const COMPANY = {
 export const ROUTES = {
   home: "/",
   services: "/services",
+  contact: "/contact",
+  privacy: "/privacy",
+  terms: "/terms",
 };
 
-// `to` is a hash for in-page sections, real route for the services page
+// `section` flags hash anchors that only resolve on the home route
 export const NAV = [
   { label: "Home", to: "/#home", section: "home" },
   { label: "About", to: "/#about", section: "about" },
   { label: "Services", to: "/services" },
   { label: "Why Us", to: "/#why-us", section: "why-us" },
   { label: "Process", to: "/#process", section: "process" },
-  { label: "Contact", to: "/#contact", section: "contact" },
+  { label: "Contact", to: "/contact" },
 ];
 
 // encodeURI handles spaces in filenames so dev/prod both serve the asset

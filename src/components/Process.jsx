@@ -23,7 +23,7 @@ export default function Process() {
                 reporting, predictable handover.
               </p>
               <div className="mt-8 sm:mt-10">
-                <Link to="/#contact" className="btn-primary">
+                <Link to="/contact" className="btn-primary">
                   Submit a work order
                   <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M5 12h14M13 5l7 7-7 7" />

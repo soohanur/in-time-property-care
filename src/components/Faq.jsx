@@ -22,7 +22,7 @@ export default function Faq() {
                 Plain answers. If something is missing, we pick up the
                 phone — no gatekeeping.
               </p>
-              <Link to="/#contact" className="btn-primary mt-6 sm:mt-8">
+              <Link to="/contact" className="btn-primary mt-6 sm:mt-8">
                 Ask a different question
                 <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M5 12h14M13 5l7 7-7 7" />

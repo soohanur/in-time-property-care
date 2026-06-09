@@ -85,7 +85,7 @@ export default function ServicesPage() {
                       ))}
                     </ul>
                     <Link
-                      to="/#contact"
+                      to="/contact"
                       className="mt-auto inline-flex items-center gap-2 text-[13px] font-medium text-brand-900 link-underline"
                     >
                       Request this service

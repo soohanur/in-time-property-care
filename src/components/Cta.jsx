@@ -28,6 +28,8 @@ export default function Cta() {
   const y = useTransform(scrollYProgress, [0, 1], ["10%", "-10%"]);
   const rot = useTransform(scrollYProgress, [0, 1], [-8, 8]);
 
+  // status: idle | sending | sent | pending | error
+  // pending = formsubmit first-time activation email sent, awaiting click
   const [status, setStatus] = useState("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
@@ -48,8 +50,13 @@ export default function Cta() {
         body: JSON.stringify(data),
       });
       const json = await res.json().catch(() => ({}));
+      const msg = json.message || "";
+      if (/activation/i.test(msg)) {
+        setStatus("pending");
+        return;
+      }
       if (!res.ok || json.success === "false") {
-        throw new Error(json.message || "Submission failed.");
+        throw new Error(msg || "Submission failed.");
       }
       setStatus("sent");
       form.reset();
@@ -174,11 +181,12 @@ export default function Cta() {
 
                 <button
                   type="submit"
-                  disabled={status === "sending" || status === "sent"}
+                  disabled={status === "sending" || status === "sent" || status === "pending"}
                   className="col-span-2 btn-accent justify-center disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   {status === "sending" && "Sending…"}
                   {status === "sent" && "Sent — we will reply soon"}
+                  {status === "pending" && "Activation pending"}
                   {(status === "idle" || status === "error") && (
                     <>
                       Send request
@@ -193,6 +201,16 @@ export default function Cta() {
                   <p className="col-span-2 mt-1 rounded-xl border border-accent-400/40 bg-accent-500/10 p-3 text-[12.5px] leading-[1.6] text-accent-200">
                     Thanks — your request reached us. We will respond the same
                     business day at the contact you provided.
+                  </p>
+                )}
+                {status === "pending" && (
+                  <p className="col-span-2 mt-1 rounded-xl border border-amber-400/40 bg-amber-500/10 p-3 text-[12.5px] leading-[1.65] text-amber-100">
+                    Form not yet live — owner must click the one-time
+                    activation link in their inbox. In the meantime, reach us
+                    directly at{" "}
+                    <a href={COMPANY.phoneHref} className="underline">{COMPANY.phoneDisplay}</a>{" "}
+                    or{" "}
+                    <a href={COMPANY.emailHref} className="underline">{COMPANY.email}</a>.
                   </p>
                 )}
                 {status === "error" && (

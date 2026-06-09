@@ -18,7 +18,7 @@ export default function Hero() {
     <section
       id="home"
       ref={ref}
-      className="relative isolate overflow-hidden pt-24 pb-10 sm:pt-32 md:pt-36 lg:pt-40"
+      className="relative isolate overflow-hidden pt-32 pb-10 sm:pt-32 md:pt-36 lg:pt-40"
     >
       <div className="absolute inset-0 -z-10 hero-grid opacity-50" />
       <div className="absolute -top-40 right-[-10%] -z-10 h-[320px] w-[320px] rounded-full bg-brand-200/45 blur-[140px] sm:h-[520px] sm:w-[520px]" />

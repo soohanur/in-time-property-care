@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function LegalLayout({ title, italic, effectiveDate, children }) {
   return (
-    <section className="relative isolate overflow-x-clip pt-24 pb-20 sm:pt-32 md:pt-36 lg:pt-40">
+    <section className="relative isolate overflow-x-clip pt-32 pb-20 sm:pt-32 md:pt-36 lg:pt-40">
       <div className="absolute inset-0 -z-10 hero-grid opacity-50" />
       <div className="absolute -top-40 right-[-10%] -z-10 h-[280px] w-[280px] rounded-full bg-brand-200/40 blur-[140px] sm:h-[480px] sm:w-[480px]" />
 

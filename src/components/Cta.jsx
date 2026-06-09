@@ -67,7 +67,7 @@ export default function Cta() {
   };
 
   return (
-    <section id="contact" ref={ref} className="relative overflow-hidden bg-brand-950 py-20 text-white sm:py-24 md:py-32 lg:py-44 noise">
+    <section id="contact" ref={ref} className="relative overflow-hidden bg-brand-950 pt-28 pb-20 text-white sm:py-24 md:py-32 lg:py-44 noise">
       <motion.div
         style={{ y, rotate: rot }}
         className="absolute -right-24 top-1/2 h-[320px] w-[320px] -translate-y-1/2 rounded-full bg-accent-500/20 blur-[160px] sm:h-[480px] sm:w-[480px]"
@@ -75,7 +75,7 @@ export default function Cta() {
       <div className="container-x relative">
         <div className="grid grid-cols-12 items-end gap-y-10 lg:gap-10">
           <div className="col-span-12 lg:col-span-7">
-            <p className="eyebrow mb-6 text-white/65">Get in touch</p>
+            <p className="eyebrow mb-6 hidden text-white/65 sm:inline-flex">Get in touch</p>
             <h2 className="display-h1 leading-[0.95] text-white">
               <SplitWord text="Ready when" />
               <br />

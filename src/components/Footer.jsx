@@ -79,7 +79,7 @@ export default function Footer() {
 
       <div className="relative overflow-hidden border-t border-white/10">
         <div className="container-x py-6">
-          <p className="font-display text-[16vw] leading-[0.85] tracking-tightest text-white/[0.06] whitespace-nowrap sm:text-[14vw]">
+          <p className="font-display text-[clamp(32px,7.5vw,140px)] leading-[0.85] tracking-tightest text-white/[0.06] whitespace-nowrap text-center">
             In Time Property Care
           </p>
         </div>

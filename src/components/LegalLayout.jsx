@@ -30,7 +30,7 @@ export default function LegalLayout({ title, italic, effectiveDate, children }) 
           <article className="col-span-12 lg:col-span-8 space-y-10 text-[15px] leading-[1.8] text-brand-900/80">
             {children}
           </article>
-          <aside className="hidden self-start lg:col-span-4 lg:block">
+          <aside className="hidden lg:col-span-4 lg:block">
             <div className="sticky top-28 rounded-3xl border border-brand-900/10 bg-white p-6 sm:p-7">
               <p className="text-[11px] uppercase tracking-[0.24em] text-brand-700">Need help?</p>
               <p className="mt-3 font-display text-xl tracking-tight text-brand-950">

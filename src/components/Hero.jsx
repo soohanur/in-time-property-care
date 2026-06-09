@@ -60,7 +60,7 @@ export default function Hero() {
                 <p className="max-w-md text-[15px] leading-[1.7] text-brand-900/70">
                   {COMPANY.name} delivers reliable, professional, and timely
                   property preservation and maintenance for residential and
-                  commercial properties — securing, winterization, yard care,
+                  commercial properties-securing, winterization, yard care,
                   trash-out, and full general maintenance.
                 </p>
               </div>

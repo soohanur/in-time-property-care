@@ -25,7 +25,7 @@ export default function Services() {
           <div className="col-span-12 lg:col-span-5">
             <p className="max-w-md text-[15px] leading-[1.75] text-white/65 lg:ml-auto">
               From emergency securing and winterization to landscaping,
-              trash-out, and ongoing general maintenance — efficient solutions
+              trash-out, and ongoing general maintenance-efficient solutions
               tailored to each property. Pick one to see the scope.
             </p>
           </div>

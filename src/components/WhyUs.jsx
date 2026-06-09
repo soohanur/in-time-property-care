@@ -20,8 +20,8 @@ export default function WhyUs() {
           <div className="col-span-12 lg:col-span-5">
             <p className="max-w-md text-[15px] leading-[1.75] text-brand-900/70 lg:ml-auto">
               We work closely with property management companies, real estate
-              professionals, investors, field service companies, and homeowners
-              — completed on time and within scope.
+              professionals, investors, field service companies, and
+              homeowners-completed on time and within scope.
             </p>
           </div>
         </div>
@@ -57,7 +57,7 @@ export default function WhyUs() {
               <p className="text-[11px] uppercase tracking-[0.24em] text-white/55">Our commitment</p>
               <p className="mt-2 max-w-3xl font-display text-xl leading-[1.3] tracking-tight sm:text-2xl md:text-[28px]">
                 Dependable services delivered with professionalism, transparency,
-                and care — helping you protect your investments with confidence.
+                and care-helping you protect your investments with confidence.
               </p>
             </div>
           </div>

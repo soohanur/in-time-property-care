@@ -52,7 +52,7 @@ export const SERVICES = [
     slug: "initial-securing",
     title: "Initial Securing",
     summary:
-      "Professional initial securing for vacant or distressed properties — protect from unauthorized access, vandalism, and weather damage.",
+      "Professional initial securing for vacant or distressed properties-protect from unauthorized access, vandalism, and weather damage.",
     bullets: ["Lock changes", "Lockbox installation", "Board-ups", "Safety inspections"],
     image: img("02 Initial Securing (3).jpg"),
   },
@@ -79,7 +79,7 @@ export const SERVICES = [
     slug: "roofing",
     title: "Roofing Services",
     summary:
-      "Roof inspections, minor repairs, tarp installation, and leak prevention — catch issues early, stop further damage.",
+      "Roof inspections, minor repairs, tarp installation, and leak prevention-catch issues early, stop further damage.",
     bullets: ["Roof inspections", "Tarp installation", "Leak prevention", "Minor repairs"],
     image: img("09 Roofing (1).jpg"),
   },
@@ -88,7 +88,7 @@ export const SERVICES = [
     slug: "plumbing",
     title: "Plumbing Services",
     summary:
-      "Basic plumbing maintenance and repair for residential and commercial properties — keep systems safe and functional.",
+      "Basic plumbing maintenance and repair for residential and commercial properties-keep systems safe and functional.",
     bullets: ["Leak repairs", "Fixture replacement", "Pipe inspections", "Water line work"],
     image: img("10 Plumbing (2).jpg"),
   },
@@ -106,7 +106,7 @@ export const SERVICES = [
     slug: "eviction-support",
     title: "Eviction Support Services",
     summary:
-      "Property cleanout and securing after tenant vacancies or legal possession — restored to a clean, manageable condition.",
+      "Property cleanout and securing after tenant vacancies or legal possession-restored to a clean, manageable condition.",
     bullets: ["Post-eviction cleanout", "Re-securing", "Trash removal", "Turnover prep"],
     image: img("08 Eviction Support (2).jpg"),
   },
@@ -115,7 +115,7 @@ export const SERVICES = [
     slug: "general-maintenance",
     title: "General Property Maintenance",
     summary:
-      "Ongoing maintenance to preserve property condition, safety, and appearance — minor repairs, inspections, handyman work.",
+      "Ongoing maintenance to preserve property condition, safety, and appearance-minor repairs, inspections, handyman work.",
     bullets: ["Minor repairs", "Handyman services", "Property inspections", "Routine upkeep"],
     image: img("11 General Property Maintenance (1).jpg"),
   },
@@ -125,7 +125,7 @@ export const WHY_US = [
   { title: "Experienced field crews", body: "Reliable hands with real property preservation experience on every job." },
   { title: "Fast response & timely completion", body: "We move when the work order drops, and we close it on schedule." },
   { title: "Professional preservation solutions", body: "Methods aligned with investor and municipal requirements." },
-  { title: "Safety & quality standards", body: "Attention to detail at every step — no shortcuts on either." },
+  { title: "Safety & quality standards", body: "Attention to detail at every step-no shortcuts on either." },
   { title: "In-house processing support", body: "Documentation, photos, and reporting handled by our own back office." },
   { title: "Dedicated client support", body: "One point of contact who knows your portfolio and your scope." },
   { title: "Client satisfaction commitment", body: "Honest communication, dependable scheduling, results that exceed scope." },
@@ -146,7 +146,7 @@ export const PROCESS = [
   {
     step: "03",
     title: "Service execution",
-    body: "Crew completes the scope to standard — preservation, securing, maintenance, or cleanout.",
+    body: "Crew completes the scope to standard-preservation, securing, maintenance, or cleanout.",
   },
   {
     step: "04",
@@ -170,7 +170,7 @@ export const STATS = [
 export const FAQS = [
   {
     q: "What types of properties do you service?",
-    a: "Residential and commercial — occupied, vacant, foreclosed, and investment properties. We work with property management companies, real estate professionals, investors, field service companies, and homeowners.",
+    a: "Residential and commercial-occupied, vacant, foreclosed, and investment properties. We work with property management companies, real estate professionals, investors, field service companies, and homeowners.",
   },
   {
     q: "How fast can you respond to a new work order?",

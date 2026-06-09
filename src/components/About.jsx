@@ -29,7 +29,7 @@ export default function About() {
               </h2>
               <p className="mt-6 max-w-md text-[15px] leading-[1.75] text-brand-900/70 sm:mt-8">
                 {COMPANY.name} specializes in protecting, preserving, and
-                maintaining residential and commercial properties — occupied,
+                maintaining residential and commercial properties-occupied,
                 vacant, foreclosed, or investment. Quality workmanship, fast
                 response, and dependable service from a team that treats every
                 work order like it matters.

@@ -5,7 +5,7 @@ import Reveal, { SplitWord } from "./Reveal";
 import { COMPANY } from "../data/site";
 
 // formsubmit.co relays form payloads to this inbox. first submission triggers
-// a one-time activation email — confirm to start receiving inquiries.
+// a one-time activation email-confirm to start receiving inquiries.
 const FORM_ENDPOINT = "https://formsubmit.co/ajax/ubuntu.soohanur@gmail.com";
 
 const SERVICE_OPTIONS = [
@@ -121,7 +121,7 @@ export default function Cta() {
               <p className="font-display text-xl text-white">Request service</p>
               <p className="mt-1 text-[12.5px] text-white/55">Tell us about the property. We reply same business day.</p>
               <form className="mt-6 grid grid-cols-2 gap-3" onSubmit={handleSubmit}>
-                <input type="hidden" name="_subject" value="New website inquiry — In Time Property Care" />
+                <input type="hidden" name="_subject" value="New website inquiry-In Time Property Care" />
                 <input type="hidden" name="_template" value="table" />
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="text" name="_honey" tabIndex={-1} autoComplete="off" className="hidden" />
@@ -167,7 +167,7 @@ export default function Cta() {
                   <input
                     type="checkbox"
                     name="SMS consent"
-                    value="Yes — opted in"
+                    value="Yes-opted in"
                     required
                     className="mt-1 h-4 w-4 shrink-0 accent-accent-500"
                   />
@@ -185,7 +185,7 @@ export default function Cta() {
                   className="col-span-2 btn-accent justify-center disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   {status === "sending" && "Sending…"}
-                  {status === "sent" && "Sent — we will reply soon"}
+                  {status === "sent" && "Message sent"}
                   {status === "pending" && "Activation pending"}
                   {(status === "idle" || status === "error") && (
                     <>
@@ -199,15 +199,12 @@ export default function Cta() {
 
                 {status === "sent" && (
                   <p className="col-span-2 mt-1 rounded-xl border border-accent-400/40 bg-accent-500/10 p-3 text-[12.5px] leading-[1.6] text-accent-200">
-                    Thanks — your request reached us. We will respond the same
-                    business day at the contact you provided.
+                    Thanks. We got it and will reply soon.
                   </p>
                 )}
                 {status === "pending" && (
                   <p className="col-span-2 mt-1 rounded-xl border border-amber-400/40 bg-amber-500/10 p-3 text-[12.5px] leading-[1.65] text-amber-100">
-                    Form not yet live — owner must click the one-time
-                    activation link in their inbox. In the meantime, reach us
-                    directly at{" "}
+                    Form not yet live. Reach us at{" "}
                     <a href={COMPANY.phoneHref} className="underline">{COMPANY.phoneDisplay}</a>{" "}
                     or{" "}
                     <a href={COMPANY.emailHref} className="underline">{COMPANY.email}</a>.

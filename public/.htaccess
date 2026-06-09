@@ -1,4 +1,4 @@
-# In Time Property Care — Apache config for SPA hosting
+# In Time Property Care-Apache config for SPA hosting
 # upload the contents of dist/ into the document root; this file ships with it.
 
 <IfModule mod_rewrite.c>

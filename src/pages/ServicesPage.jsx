@@ -27,7 +27,7 @@ export default function ServicesPage() {
               <p className="max-w-md text-[15px] leading-[1.7] text-brand-900/70 lg:ml-auto">
                 A complete range of preservation and maintenance services for
                 residential, commercial, vacant, foreclosed, and investment
-                properties — completed on time, within scope, photo-documented.
+                properties-completed on time, within scope, photo-documented.
               </p>
             </div>
           </div>

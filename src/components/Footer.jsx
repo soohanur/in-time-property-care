@@ -13,7 +13,7 @@ export default function Footer() {
             <p className="mt-6 max-w-sm text-[14px] leading-[1.75] text-white/60">
               {COMPANY.name} delivers reliable, professional, and timely
               property preservation and maintenance services for residential
-              and commercial properties — {COMPANY.tagline.toLowerCase()}
+              and commercial properties-{COMPANY.tagline.toLowerCase()}
             </p>
             <div className="mt-8 grid gap-2.5 text-[13px] text-white/70">
               <a href={COMPANY.phoneHref} className="link-underline hover:text-accent-300">

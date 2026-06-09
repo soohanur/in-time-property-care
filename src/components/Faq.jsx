@@ -20,7 +20,7 @@ export default function Faq() {
               </h2>
               <p className="mt-6 max-w-md text-[15px] leading-[1.7] text-brand-900/70 sm:mt-8">
                 Plain answers. If something is missing, we pick up the
-                phone — no gatekeeping.
+                phone-no gatekeeping.
               </p>
               <Link to="/contact" className="btn-primary mt-6 sm:mt-8">
                 Ask a different question

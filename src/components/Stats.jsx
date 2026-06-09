@@ -43,7 +43,7 @@ export default function Stats() {
           </div>
           <div className="col-span-12 lg:col-span-6">
             <p className="max-w-md text-[15px] leading-[1.75] text-white/65 lg:ml-auto">
-              No vanity numbers. The metrics our clients ask about — response
+              No vanity numbers. The metrics our clients ask about-response
               time, coverage, and the standard our crews measure themselves
               against every single work order.
             </p>

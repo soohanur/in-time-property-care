@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Reveal, { SplitWord } from "./Reveal";
 
 export default function LegalLayout({ title, italic, effectiveDate, children }) {
   return (
@@ -8,17 +7,10 @@ export default function LegalLayout({ title, italic, effectiveDate, children }) 
       <div className="absolute -top-40 right-[-10%] -z-10 h-[280px] w-[280px] rounded-full bg-brand-200/40 blur-[140px] sm:h-[480px] sm:w-[480px]" />
 
       <div className="container-x">
-        <nav className="mb-6 flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-[0.22em] text-brand-900/55 sm:mb-8 sm:text-[12px]">
-          <Link to="/" className="hover:text-brand-900">Home</Link>
-          <span className="text-brand-900/30">/</span>
-          <span className="text-brand-900">{title}</span>
-        </nav>
-
         <div className="grid grid-cols-12 items-end gap-8">
           <div className="col-span-12 lg:col-span-8">
-            <p className="eyebrow mb-5 sm:mb-6">Legal</p>
             <h1 className="display-h2 text-brand-950">
-              <SplitWord text={title} />
+              {title}
               {italic && (
                 <>
                   {" "}
@@ -34,7 +26,7 @@ export default function LegalLayout({ title, italic, effectiveDate, children }) 
           </div>
         </div>
 
-        <Reveal className="mt-12 grid grid-cols-12 gap-8 sm:mt-16 lg:gap-12">
+        <div className="mt-12 grid grid-cols-12 gap-8 sm:mt-16 lg:gap-12">
           <article className="col-span-12 lg:col-span-8 space-y-10 text-[15px] leading-[1.8] text-brand-900/80">
             {children}
           </article>
@@ -52,7 +44,7 @@ export default function LegalLayout({ title, italic, effectiveDate, children }) 
               </Link>
             </div>
           </aside>
-        </Reveal>
+        </div>
       </div>
     </section>
   );

@@ -6,7 +6,7 @@ import { COMPANY } from "../data/site";
 
 // formsubmit.co relays form payloads to this inbox. first submission triggers
 // a one-time activation email-confirm to start receiving inquiries.
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/ubuntu.soohanur@gmail.com";
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/Kevin.virtualwork@gmail.com";
 
 const SERVICE_OPTIONS = [
   "Initial securing",

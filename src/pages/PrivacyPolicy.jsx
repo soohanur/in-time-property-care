@@ -124,15 +124,6 @@ export default function PrivacyPolicy() {
           <li>Address: {COMPANY.address}</li>
         </ul>
       </LegalSection>
-
-      <LegalSection heading="SMS Consent Disclosure">
-        <p className="rounded-2xl border border-brand-700/15 bg-brand-50 p-5 text-[14px] leading-[1.75] text-brand-900/80">
-          &ldquo;By checking this box, I agree to receive SMS/text messages
-          from In Time Property Care regarding my inquiry or account. Reply
-          STOP at any time to opt-out. Message and data rates may apply. I
-          have read and agree to the Privacy Policy.&rdquo;
-        </p>
-      </LegalSection>
     </LegalLayout>
   );
 }

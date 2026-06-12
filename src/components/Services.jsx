@@ -50,9 +50,6 @@ export default function Services() {
                           {s.title}
                         </span>
                       </span>
-                      <span className="col-span-3 sm:col-span-3 hidden text-[12px] uppercase tracking-[0.22em] text-white/45 sm:block">
-                        {s.bullets.length} deliverables
-                      </span>
                       <span
                         className={`col-span-3 sm:col-span-1 ml-auto grid h-10 w-10 place-items-center rounded-full border transition-all sm:h-11 sm:w-11 ${
                           open

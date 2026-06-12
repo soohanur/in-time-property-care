@@ -1,9 +1,9 @@
 export const COMPANY = {
   name: "In Time Property Care LLC",
   short: "In Time Property Care",
-  phone: "929-261-8823",
-  phoneHref: "tel:+19292618823",
-  phoneDisplay: "(929) 261-8823",
+  phone: "516-619-2409",
+  phoneHref: "tel:+15166192409",
+  phoneDisplay: "(516) 619-2409",
   email: "intimepropertycare@gmail.com",
   emailHref: "mailto:intimepropertycare@gmail.com",
   hours: "Mon – Fri · 8:00 AM – 6:00 PM (Local Time)",

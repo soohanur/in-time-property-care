@@ -166,14 +166,15 @@ export default function Cta() {
                 <label className="col-span-2 mt-1 flex items-start gap-3 rounded-2xl border border-white/15 bg-white/[0.03] p-3.5 text-[12.5px] leading-[1.7] text-white/75 sm:p-4">
                   <input
                     type="checkbox"
-                    name="SMS consent"
-                    value="Yes-opted in"
+                    name="Agreement"
+                    value="Yes - agreed to Terms and Privacy Policy"
                     required
                     className="mt-1 h-4 w-4 shrink-0 accent-accent-500"
                   />
                   <span>
-                    Agree to SMS from In Time Property Care. STOP to opt-out.
-                    Msg/data rates apply.{" "}
+                    I agree to the{" "}
+                    <Link to="/terms" className="text-accent-300 underline-offset-4 hover:underline">Terms &amp; Conditions</Link>
+                    {" "}and{" "}
                     <Link to="/privacy" className="text-accent-300 underline-offset-4 hover:underline">Privacy Policy</Link>.
                   </span>
                 </label>

@@ -40,7 +40,7 @@ export default function Services() {
                   <li key={s.no}>
                     <button
                       onClick={() => setActive(i)}
-                      className="group grid w-full grid-cols-12 items-center gap-3 py-5 text-left transition-colors hover:bg-white/[0.03] sm:gap-4 sm:py-6"
+                      className="group grid w-full grid-cols-12 items-center gap-3 py-5 pr-2.5 text-left transition-colors hover:bg-white/[0.03] sm:gap-4 sm:py-6"
                     >
                       <span className="col-span-2 sm:col-span-1 font-display text-sm text-white/40">
                         {s.no}

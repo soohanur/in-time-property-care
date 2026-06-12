@@ -45,7 +45,7 @@ export default function Services() {
                       <span className="col-span-2 sm:col-span-1 font-display text-sm text-white/40">
                         {s.no}
                       </span>
-                      <span className="col-span-7 sm:col-span-7 font-display text-xl font-semibold tracking-tight sm:text-2xl md:text-3xl">
+                      <span className="col-span-7 sm:col-span-10 font-display text-xl font-semibold tracking-tight sm:text-2xl md:text-3xl">
                         <span className={`transition-colors ${open ? "text-accent-300" : "text-white"}`}>
                           {s.title}
                         </span>

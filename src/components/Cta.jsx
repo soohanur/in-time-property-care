@@ -172,9 +172,8 @@ export default function Cta() {
                     className="mt-1 h-4 w-4 shrink-0 accent-accent-500"
                   />
                   <span>
-                    I agree to receive SMS/text messages from In Time Property
-                    Care about my inquiry. Reply STOP to opt-out. Msg &amp;
-                    data rates may apply. I have read the{" "}
+                    Agree to SMS from In Time Property Care. STOP to opt-out.
+                    Msg/data rates apply.{" "}
                     <Link to="/privacy" className="text-accent-300 underline-offset-4 hover:underline">Privacy Policy</Link>.
                   </span>
                 </label>
